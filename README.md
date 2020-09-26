@@ -1,37 +1,63 @@
+[Hux Blog](https://huangxuan.me)
+================================
 
-# Leach Chen Blog is a minimal clear theme for Jekyll
-![Leach Chen Blog - Imac](https://leach-chen.github.io/blogdemo/assets/img/adam-blog-imac.jpg)
+> I never expected this becomes popular.
 
-## Demo
-[网站出处](https://github.com/leach-chen/blogdemo)
+![](http://huangxuan.me/img/blog-desktop.jpg)
 
-[网站参考来源](https://github.com/artemsheludko/adam-blog)
 
-[网站搭建教程](https://www.jianshu.com/p/9f71e260925d)
+[User Manual 👉](_doc/Manual.md)
+--------------------------------------------------
 
-[网站效果预览（点击预览）](https://leach-chen.github.io/blogdemo/)
+### Getting Started
 
-The main page would look like this:
+1. You will need [Ruby](https://www.ruby-lang.org/en/) and [Bundler](https://bundler.io/) to use [Jekyll](https://jekyllrb.com/). Following [Using Jekyll with Bundler](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/) to fullfill the enviromental requirement.
 
-![Main page preview](https://leach-chen.github.io/blogdemo/other/img/mainpage.png)
+2. Installed dependencies in the `Gemfile`:
 
-The post page would look like this:
+```sh
+$ bundle install 
+```
 
-![Post page preview](https://leach-chen.github.io/blogdemo/other/img/articlepage.png)
+3. Serve the website (`localhost:4000` by default):
 
-## Features
+```sh
+$ bundle exec jekyll serve  # alternatively, npm start
+```
 
-- [Google Fonts](https://fonts.google.com/)
-- [Font Awesome](http://fontawesome.io/)
-- [Disqus](https://disqus.com/)
-- [MailChimp](https://mailchimp.com/)
-- [Analytics](https://analytics.google.com/analytics/web/)
-- [Search](https://github.com/christian-fei/Simple-Jekyll-Search)
+### Development (Build From Source)
 
-## Installation:
+To modify the theme, you will need [Grunt](https://gruntjs.com/). There are numbers of tasks you can find in the `Gruntfile.js`, includes minifing JavaScript, compiling `.less` to `.css`, adding banners to keep the Apache 2.0 license intact, watching for changes, etc. 
 
-Fork the ``master`` branch and delete ``gh-pages`` branch in it. This is important because ``gh-pages`` branch is used here only to host the blog. You should be using the master branch as the source and create a fresh ``gh-pages`` branch.
+Yes, they were inherited and are extremely old-fashioned. There is no modularization and transpilation, etc.
 
-### License
+Critical Jekyll-related code are located in `_include/` and `_layouts/`. Most of them are [Liquid](https://github.com/Shopify/liquid/wiki) templates.
 
-GNU General Public License v3.0
+This theme uses the default code syntax highlighter of jekyll, [Rouge](http://rouge.jneen.net/), which is compatible with Pygments theme so just pick any pygments theme css (e.g. from [here](http://jwarby.github.io/jekyll-pygments-themes/languages/javascript.html) and replace the content of `highlight.less`.
+
+
+### Interesting to know more? Checkout the [full user manual](_doc/Manual.md)!
+
+
+Other Resources
+---------------
+
+Ports
+- [**Hexo**](https://github.com/Kaijun/hexo-theme-huxblog) by @kaijun
+- [**React-SSR**](https://github.com/LucasIcarus/huxpro.github.io/tree/ssr) by @LucasIcarus
+
+[Starter/Boilerplate](https://github.com/huxpro/huxblog-boilerplate)
+- Out of date. Helps wanted for updating it on par with the main repo
+
+Translation
+- [🇨🇳 (somewhat outdated)](https://github.com/Huxpro/huxpro.github.io/blob/master/_doc/README.zh.md)
+
+
+License
+-------
+
+Apache License 2.0.
+Copyright (c) 2015-present Huxpro
+
+Hux Blog is derived from [Clean Blog Jekyll Theme (MIT License)](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll/)
+Copyright (c) 2013-2016 Blackrock Digital LLC.
