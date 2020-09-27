@@ -6,7 +6,7 @@ description: Hello World！
 img: post-2.jpg # Add image post (optional)
 tags: [随笔]
 author: # Add name author (optional)
-jekyll: true
+essays: true
 ---
 
 {{site.label1}} <a href="https://github.com/leach-chen/blogdemo" target="\_blank">Leach Chen</a> {{site.label2}}
