@@ -80,15 +80,15 @@ label2:  </span>
 
 links1:
   - name:         所有
-    url:          home
+    url:          /
     type:         recent
     external:     false
   - name:         随笔
-    url:          /blogdemo/myblog/essays
+    url:          /myblog/essays
     type:         essays
     external:     false
   - name:         Jekyll
-    url:          /blogdemo/myblog/jekyll
+    url:          /myblog/jekyll
     type:         jekyll
     external:     false
 
