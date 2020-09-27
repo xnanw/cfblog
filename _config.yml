@@ -87,9 +87,9 @@ links1:
     url:          /myblog/essays
     type:         essays
     external:     false
-  - name:         Jekyll
-    url:          /myblog/jekyll
-    type:         jekyll
+  - name:         视频
+    url:          /myblog/video
+    type:         video
     external:     false
 
 blog_1:    recent
