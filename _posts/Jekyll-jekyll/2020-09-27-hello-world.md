@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Hello World！我的个人网站
+title: Hello World！你好！
 date:  2018-02-07 21:16:00 +0900
 description: Hello World！
 img: 90849517.jpg # Add image post (optional)
-tags: [随笔]
+tags: [jekyll]
 author: # Add name author (optional)
 essays: true
 ---
