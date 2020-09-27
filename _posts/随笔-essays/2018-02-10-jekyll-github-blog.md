@@ -4,7 +4,7 @@ title: Github+Jekyll 搭建个人网站详细教程
 date:  2018-02-10 12:54:00 +0900
 description: Hello World！
 img: post-2.jpg # Add image post (optional)
-tags: [Jekyll,GitHub]
+tags: [随笔]
 author: # Add name author (optional)
 jekyll: true
 ---
