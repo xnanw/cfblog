@@ -9,8 +9,6 @@ author: # Add name author (optional)
 essays: true
 ---
 
-{{site.label1}} <a href="https://github.com/leach-chen/blogdemo" target="\_blank">Leach Chen</a> {{site.label2}}
-
 Hello World！
 
 经过一段业余时间的修整，由我亲手修改打造的个人网站终于问世啦！特发表一篇文章记录下🙂
