@@ -13,7 +13,7 @@ return Cookies.get(o)||t[o]}function e(o,t,i){Cookies.set(o,t,{expires:i||3650})
 else if(o(t).hasClass("google"))o(".search-form").attr("action","https://www.google.com/search"),o(".search-keyword").attr({name:"q",placeholder:"谷歌搜索"})
 else if(o(t).hasClass("bing"))o(".search-form").attr("action","https://cn.bing.com/search"),o(".search-keyword").attr({name:"q",placeholder:"必应搜索"})
 else if(o(t).hasClass("taobao"))o(".search-form").attr("action","http://s.taobao.com/search"),o(".search-keyword").attr({name:"q",placeholder:"淘宝搜索"})
-else if(o(t).hasClass("image")){o(".search-form").attr("action","https://cn.bing.com/images/search"),o(".search-keyword").attr({name:"q",placeholder:"谷歌图片搜索"})
+else if(o(t).hasClass("image")){o(".search-form").attr("action","https://cn.bing.com/images/search"),o(".search-keyword").attr({name:"q",placeholder:"海量图片搜索"})
 var i=new Image
 i.src="https://images.google.com/favicon.ico?"+Date.now(),i.onload=function(){o(".search-form").attr("action","https://www.google.com/search"),o(".search-form").prepend('<input class="search-hidden" type="hidden" name="tbm" value="isch">')}}
 else if(o(t).hasClass("scholar")){o(".search-form").attr("action","https://xueshu.baidu.com/s"),o(".search-keyword").attr({name:"wd",placeholder:"中英文文献检索"})
