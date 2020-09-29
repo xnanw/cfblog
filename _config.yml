@@ -105,4 +105,4 @@ blog_4:    image
 #permalink: /:year/:month/:day/:title.html
 
 
-timezone:Asia/Shanghai
+timezone: Asia/Shanghai
