@@ -14604,6 +14604,7 @@ body>header.header.header-style-2 .icon-bar {
 	border-radius:3px
 }
 .widget_post_thumb .item-img img {
+	object-fit:cover;
 	width:100%;
 	height:63px;
 	vertical-align:top
