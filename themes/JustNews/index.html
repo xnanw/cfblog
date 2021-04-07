@@ -84,8 +84,11 @@
 											<p>{{ &contentText }} ...</p>
 										</div>
 										<div class="item-meta">
-											<span class="item-meta-li date">{{ &createDate10 }}</span>
-											<span>{{ #tags }}<a href="/tags/{{&.}}" rel="tag">{{&.}}</a>{{ /tags }}</span>
+											<span class="item-meta-li date">{{ &createDate10 }}
+											{{ #tags }}
+												<a href="/tags/{{&.}}" rel="tag">{{&.}}</a>
+											{{ /tags }}
+											</span>
 											<div class="item-meta-right">
 												<span class="item-meta-li views" title="阅读数">
 													<i class="wpcom-icon wi">
