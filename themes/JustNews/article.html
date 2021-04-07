@@ -257,6 +257,25 @@ var fifuImageVars = {"fifu_lazy":"1","fifu_woo_lbox_enabled":"1","fifu_woo_zoom"
 <script>hljs.initHighlightingOnLoad(); //代码高亮
 					</script>
 		{{ &OPT.codeBeforBody }}
+                                <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+                                <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+				<script>
+                                // 给图片添加链接
+                                $(document).ready(function() {
+                                    $("p img").each(function() {
+                                        var strA = "<a data-fancybox='fancybox' href='" + this.src + "'></a>";
+                                        $(this).wrapAll(strA);
+                                    });
+                                });
+   			        </script>
+				<script>
+			        // B站视频自适应
+                                var iframe = document.getElementsByTagName("iframe");
+                                var num = iframe.length;
+                                for (; num > 0; num--) {
+                                    iframe[num - 1].style.height = iframe[num - 1].scrollWidth * 0.5625 + "px";
+                                }
+                                </script>		
 	</body>
 
 </html>
