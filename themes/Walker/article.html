@@ -2,19 +2,20 @@
  <head> 
   <meta charset="utf-8" /> 
   <meta name="viewport" content="width=device-width, initial-scale=1" /> 
-  <title>【文章标题】 - 【网站标题】</title> 
-  <meta name="description" content="【文章页面描述】" /> 
-  <meta name="keywords" content="【网站关键词】">  
-  <link rel="stylesheet" href="【首页地址】assets/css/katex.min.css" /> 
-  <link href="【首页地址】assets/css/remixicon.css" rel="stylesheet" /> 
-  <link rel="stylesheet" href="【首页地址】assets/css/css.css" /> 
-  <link rel="stylesheet" href="【首页地址】assets/css/animate.min.css" /> 
-  <link rel="stylesheet" href="【首页地址】assets/css/main.css" /> 
-  <link rel="stylesheet" href="【首页地址】assets/css/tp.css">
- <link rel="stylesheet" href="【首页地址】assets/css/jquery.fancybox.min.css">   
-  <script type="text/javascript" src="【首页地址】assets/js/jquery.min.js"></script>
-  <script src="【首页地址】assets/js/jquery.fancybox.min.js"></script>
-  <script src="【首页地址】assets/js/jquery.scrollLoad.min.js"></script> 
+  <title>{{ &articleSingle.title }} - {{ &OPT.siteName }}</title> 
+  <meta name="description" content="{{ &OPT.siteDescription }}" /> 
+  <meta name="keywords" content="{{ &keyWords }}">
+
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/xnanw/cfblog/master/themes/Walker/files/katex.min.css" /> 
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" /> 
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/xnanw/cfblog/master/themes/Walker/files/css.css" /> 
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/xnanw/cfblog/master/themes/Walker/files/animate.min.css" /> 
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/xnanw/cfblog/master/themes/Walker/files/main.css" /> 
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/xnanw/cfblog/master/themes/Walker/files/tp.css">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">   
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <script src="https://raw.githubusercontent.com/xnanw/cfblog/master/themes/Walker/files/jquery.scrollLoad.min.js"></script> 
  </head> 
  <body> 
   <div class="main px-4 flex flex-col lg:flex-row"> 
@@ -23,8 +24,8 @@
      <div class="sidebar-content"> 
       <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50"> 
        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i> 
-       <a href="【首页地址】"> <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="【首页地址】assets/tx.jpg" alt="" /> </a> 
-       <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">【网站标题】</h1> 
+       <a href="/"> <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://raw.githubusercontent.com/xnanw/cfblog/master/themes/Walker/files/tx.jpg" alt="" /> </a> 
+       <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">{{ &OPT.siteName }}</h1> 
       </div> 
             <div class="animated fadeInLeft" style="animation-delay: 0.4s">
               <p class="my-4 text-gray-600 font-light hidden lg:block">文章目录</p>
@@ -38,42 +39,43 @@
    <div class="menu-container"> 
     <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i> 
     <div> 
-     <a href="【首页地址】" class="menu" style="animation-delay: 0s"> 首页 </a> 
-     <a href="【首页地址】article/3.html" class="menu" style="animation-delay: 0.2s"> 作品 </a> 
-     <a href="【首页地址】article/2.html" class="menu" style="animation-delay: 0.4s"> 友人 </a>
-     <a href="【首页地址】search.html" class="menu" style="animation-delay: 0.4s"> 搜索 </a> 	 
-     <a href="【首页地址】article/1.html" class="menu" style="animation-delay: 0.6000000000000001s"> 关于 </a> 
+    {{ #widgetMenuList }}
+	 <li class="menu"><a href="{{ &url }}">{{ &title }}</a></li>
+    {{ /widgetMenuList }}
     </div> 
    </div> 
    <div class="mask" onclick="closeMenu()"> 
    </div> 
   <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn"> 
-    <h1 class="text-3xl font-bold lg:mt-16">【文章标题】</h1> 
+    <h1 class="text-3xl font-bold lg:mt-16">{{ &articleSingle.title }}</h1> 
     <div class="text-sm text-gray-700 lg:my-8">
-      【发布时间2】 / 【文章字数2】字 
+      {{ &createDate10 }}
     </div> 
 	<br>
     <!-- <img class="post-feature-image rounded-lg mx-auto my-4" src="" alt=""> 自行选择是否 输出文章封面  -->
 	 <!-- 文章开始 -->
     <div class="post-content yue"> 
 	
-	【文章内容】
+	{{ &articleSingle.contentHtml }}
 	
     </div> 
     <!-- 上下篇文章-->
 	<div class="flex justify-between py-8"> 
      <div class="prev-post"> 
-		【上一篇】
+                                  {{ #articleNewer }}
+                                  <a href="{{ &url }}"  class="pre">{{ &title }}</a>
+                                  {{ /articleNewer }}
      </div> 
      <div class="next-post"> 
-        【下一篇】
+          {{ #articleOlder }}
+          <a href="{{ &url }}" class="next">{{ &title }}</a>
+          {{ /articleOlder }}
      </div> 
     </div> 
-	【网站评论】
-	<link rel="stylesheet" href="../assets/css/pl.css">	
+	{{ &OPT.commentCode }}	
    </div> 
   </div> 
-	<script src="【首页地址】assets/js/jquery.toc.js"></script> 
+	<script src="https://raw.githubusercontent.com/xnanw/cfblog/master/themes/Walker/files/jquery.toc.js"></script> 
     <script>
         var options = {
             selector: 'h2, h3, h4',
@@ -84,14 +86,14 @@
         $('.toc-container').initTOC(options);
 
     </script>	
-	<script src="【首页地址】assets/js/prism.js"></script> 
-	<script src="【首页地址】assets/js/Walker.js"></script>	
+	<script src="https://raw.githubusercontent.com/xnanw/cfblog/master/themes/Walker/files/prism.js"></script> 
+	<script src="https://raw.githubusercontent.com/xnanw/cfblog/master/themes/Walker/files/Walker.js"></script>	
 		<script type="text/javascript">
 		  jQuery(function() {
   			// 随机生成右下角东方返回顶部
 			var touhou = ['marisa', 'flandre', 'reimu'];
 			i = Math.floor(Math.random() * touhou.length);
-			jQuery('body').append('<img id="BackToTop" src="/assets/images/' + touhou[i] + '.png" title="返回顶部~">');
+			jQuery('body').append('<img id="BackToTop" src="https://raw.githubusercontent.com/xnanw/cfblog/master/themes/Walker/files/img/' + touhou[i] + '.png" title="返回顶部~">');
 			jQuery('#rocket').remove();
 			jQuery('#BackToTop').on('click',
 			function() {
