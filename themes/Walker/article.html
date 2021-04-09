@@ -16,10 +16,7 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/xnanw/cfblog@master/themes/Walker/files/jquery.scrollLoad.min.js"></script> 
-  {{ &articleSingle.createDate10 }} / 
-  {{ #articleSingle.tags }}
-	  <a href="/tags/{{&.}}" rel="tag">{{&.}} </a> 
-  {{ /articleSingle.tags }}
+
  </head> 
  <body> 
   <div class="main px-4 flex flex-col lg:flex-row"> 
@@ -54,7 +51,10 @@
   <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn"> 
     <h1 class="text-3xl font-bold lg:mt-16">{{ &articleSingle.title }}</h1> 
     <div class="text-sm text-gray-700 lg:my-8">
-      {{ &createDate10 }}
+  {{ &articleSingle.createDate10 }} / 
+  {{ #articleSingle.tags }}
+	  <a href="/tags/{{&.}}" rel="tag">{{&.}} </a> 
+  {{ /articleSingle.tags }}
     </div> 
 	<br>
     <!-- <img class="post-feature-image rounded-lg mx-auto my-4" src="" alt=""> 自行选择是否 输出文章封面  -->
