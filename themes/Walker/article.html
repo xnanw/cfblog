@@ -109,6 +109,24 @@
 		  }); 
 		 })
 
-		</script>	
+		</script>
+	 
+	                        <script>
+                                // 给图片添加链接
+                                $(document).ready(function() {
+                                    $("p img").each(function() {
+                                        var strA = "<a data-fancybox='fancybox' href='" + this.src + "'></a>";
+                                        $(this).wrapAll(strA);
+                                    });
+                                });
+   			        </script>
+				<script>
+			        // B站视频自适应
+                                var iframe = document.getElementsByTagName("iframe");
+                                var num = iframe.length;
+                                for (; num > 0; num--) {
+                                    iframe[num - 1].style.height = iframe[num - 1].scrollWidth * 0.5625 + "px";
+                                }
+                                </script>
  </body>
 </html>
