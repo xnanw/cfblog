@@ -5,8 +5,8 @@
 <title>Valine</title>
 <link rel="stylesheet" href="https://sindresorhus.com/github-markdown-css/github-markdown.css">
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-<script src="files/Valine.min.js"></script>
-<link rel="stylesheet" href="files/pl.css">
+<script src="https://cdn.jsdelivr.net/gh/xnanw/cfblog@master/valine/files/Valine.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xnanw/cfblog@master/valine/files/pl.css">
 <style>
 	@media (min-width: 768px) {
 		.markdown-body {
@@ -21,12 +21,12 @@
 </head>
 <body>
 <article class="markdown-body">
-<div id="comments"></div>
-        <script src="files/av-min.js"></script>
+<div id="vcomment"></div>
+        <script src="https://cdn.jsdelivr.net/gh/xnanw/cfblog@master/valine/files/av-min.js"></script>
         <script>
             new Valine({
                 av: AV,
-                el: '#comments',  
+                el: '#vcomment',  
                 lang: 'zh-cn' || 'zh-cn',
                 admin_email: '',
                 emoticon_url: 'https://cdn.jsdelivr.net/npm/minivaline@6.1.0/imgs/qq',
