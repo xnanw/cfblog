@@ -45,3 +45,5 @@
         @media screen and (max-width: 600px) {
           .valine .vlist .vcard .vcomment-children {
             border-left: none;
+	}
+}
