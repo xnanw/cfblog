@@ -516,6 +516,7 @@ table {
  * opt-out.
  */
 a {
+  display: inline-block;
   color: inherit;
   text-decoration: inherit;
 }
@@ -6152,7 +6153,7 @@ pre[data-line] {
 .yue video {
   max-width: 100%;
   margin: 0.2em auto;
-  border-radius: 0rem;
+  border-radius: 0.5rem;
 }
 .yue a img {
   border: none;
