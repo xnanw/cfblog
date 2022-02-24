@@ -91,6 +91,19 @@
    </div> 
   </div>
 	 
+  <a href="javascript:;" class="to-top" style="cursor: pointer; position: fixed; right: 15px; bottom: 30px;"><i class="remixicon-arrow-up-s-line text-2xl" style="background-color: #ffffff; border-radius: 50rem; padding: 11px;"></i></a>
+  <script src="https://cdn.jsdelivr.net/gh/xnanw/cfblog@master/themes/Walker/files/jquery.toTop.js"></script>
+  <script>
+  $('.to-top').toTop({
+      //options with default values
+      autohide: true,
+      offset: 420,
+      speed: 500,
+      position: true,
+      right: 15,
+      bottom: 30
+  });
+</script>  
 	<script src="https://cdn.jsdelivr.net/gh/xnanw/cfblog@master/themes/Walker/files/jquery.toc.js"></script> 
     <script>
         var options = {
@@ -104,27 +117,6 @@
     </script>	
 	<script src="https://cdn.jsdelivr.net/gh/xnanw/cfblog@master/themes/Walker/files/prism.js"></script> 
 	<script src="https://cdn.jsdelivr.net/gh/xnanw/cfblog@master/themes/Walker/files/Walker.js"></script>	
-		<script type="text/javascript">
-		  jQuery(function() {
-  			// 随机生成右下角东方返回顶部
-			var touhou = ['marisa', 'flandre', 'reimu'];
-			i = Math.floor(Math.random() * touhou.length);
-			jQuery('body').append('<img id="BackToTop" src="https://cdn.jsdelivr.net/gh/xnanw/cfblog@master/themes/Walker/files/img/' + touhou[i] + '.png" title="返回顶部~">');
-			jQuery('#rocket').remove();
-			jQuery('#BackToTop').on('click',
-			function() {
-			  jQuery('body,html').animate({
-				scrollTop: 0
-			  },
-			  500);
-			});
-		  });
-		$(function(){
-		  $("#BackToTop").click(function() {
-			  $("html,body").animate({scrollTop:0}, 500);
-		  }); 
-		 })
-		</script>
 	 
 	        <script>
                 // 给图片添加链接
